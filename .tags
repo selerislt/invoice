@@ -1,0 +1,44 @@
+CreateServicesTable	/Users/devidso/websites/oranzine/database/migrations/2017_05_04_200236_create_services_table.php	/^class CreateServicesTable extends Migration$/;"	class	line:7
+up	/Users/devidso/websites/oranzine/database/migrations/2017_05_04_200236_create_services_table.php	/^    public function up()$/;"	function	line:14
+down	/Users/devidso/websites/oranzine/database/migrations/2017_05_04_200236_create_services_table.php	/^    public function down()$/;"	function	line:36
+Service	/Users/devidso/websites/oranzine/app/Service.php	/^class Service extends Model$/;"	class	line:7
+fillable	/Users/devidso/websites/oranzine/app/Service.php	/^    protected $fillable = ['sweat', 'client_id', 'invoice_nr', 'name', 'description', 'cost', 'price', 'attachment', 'delivery_date'];$/;"	variable	line:9
+fillable	/Users/devidso/websites/oranzine/app/Service.php	/^    protected $fillable = ['sweat', 'client_id', 'invoice_nr', 'name', 'description', 'cost', 'price', 'attachment', 'delivery_date'];$/;"	variable	line:9
+client	/Users/devidso/websites/oranzine/app/Service.php	/^    function client(){$/;"	function	line:11
+Client	/Users/devidso/websites/oranzine/app/Client.php	/^class Client extends Model$/;"	class	line:7
+fillable	/Users/devidso/websites/oranzine/app/Client.php	/^    protected $fillable = ['user_id', 'name'];$/;"	variable	line:9
+fillable	/Users/devidso/websites/oranzine/app/Client.php	/^    protected $fillable = ['user_id', 'name'];$/;"	variable	line:9
+services	/Users/devidso/websites/oranzine/app/Client.php	/^    public function services(){$/;"	function	line:11
+getName	/Users/devidso/websites/oranzine/app/Client.php	/^    public function getName(){$/;"	function	line:15
+number	/Users/devidso/websites/oranzine/resources/views/clients/view.blade.php	/^                        @foreach((Request::input('order') ? $client->services()->orderBy(Request::input('order'), 'asc')->get() : $client->services()->get()) as $number => $service)$/;"	variable	line:44
+ClientController	/Users/devidso/websites/oranzine/app/Http/Controllers/ClientController.php	/^class ClientController extends Controller$/;"	class	line:11
+index	/Users/devidso/websites/oranzine/app/Http/Controllers/ClientController.php	/^    function index(){$/;"	function	line:13
+add	/Users/devidso/websites/oranzine/app/Http/Controllers/ClientController.php	/^    function add(){$/;"	function	line:19
+view	/Users/devidso/websites/oranzine/app/Http/Controllers/ClientController.php	/^    function view(Request $r, $id){$/;"	function	line:23
+post	/Users/devidso/websites/oranzine/app/Http/Controllers/ClientController.php	/^    function post(Request $r){$/;"	function	line:29
+data	/Users/devidso/websites/oranzine/app/Http/Controllers/ClientController.php	/^        $data = $r->all();$/;"	variable	line:30
+destroy	/Users/devidso/websites/oranzine/app/Http/Controllers/ClientController.php	/^    function destroy($id){$/;"	function	line:40
+client	/Users/devidso/websites/oranzine/app/Http/Controllers/ClientController.php	/^        $client = Client::find($id);$/;"	variable	line:41
+aliases	/Users/devidso/websites/oranzine/config/app.php	/^    | This array of class aliases will be registered when this application$/;"	class	line:188
+number	/Users/devidso/websites/oranzine/resources/views/clients/home.blade.php	/^                        @foreach($clients as $number => $client)$/;"	variable	line:25
+profit	/Users/devidso/websites/oranzine/resources/views/clients/home.blade.php	/^                                $profit = 0;$/;"	variable	line:27
+sales	/Users/devidso/websites/oranzine/resources/views/clients/home.blade.php	/^                                $sales = 0;$/;"	variable	line:28
+profit	/Users/devidso/websites/oranzine/resources/views/clients/home.blade.php	/^                                    $profit = $profit + ($service->price - $service->cost);$/;"	variable	line:31
+sales	/Users/devidso/websites/oranzine/resources/views/clients/home.blade.php	/^                                    $sales = $sales + $service->price;$/;"	variable	line:32
+ServiceController	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^class ServiceController extends Controller$/;"	class	line:12
+add	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^    function add()$/;"	function	line:14
+post	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^    function post(Request $r)$/;"	function	line:26
+data	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^        $data =  $r->all();$/;"	variable	line:28
+validator	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^        $validator = Validator::make($data,[$/;"	variable	line:30
+attachment	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^        (isset($data['attachment'])) ? $attachment = $r->file('attachment')->store('attachments') : $attachment = null;$/;"	variable	line:45
+view	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^    function view($id)$/;"	function	line:62
+all	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^    function all(Request $r)$/;"	function	line:69
+destroy	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^    function destroy($id)$/;"	function	line:81
+service	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^        $service = Service::find($id);$/;"	variable	line:83
+generatePDFall	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^    function generatePDFall(Request $r)$/;"	function	line:90
+PDF	/Users/devidso/websites/oranzine/app/Http/Controllers/ServiceController.php	/^        $PDF = PDF::loadView('pdf.all', $data);$/;"	variable	line:96
+index	/Users/devidso/websites/oranzine/resources/views/pdf/all.blade.php	/^            @foreach($services as $index => $service)$/;"	variable	line:21
+profit_sweat	/Users/devidso/websites/oranzine/resources/views/services/all.blade.php	/^                        $profit_sweat = 0;$/;"	variable	line:26
+profit	/Users/devidso/websites/oranzine/resources/views/services/all.blade.php	/^                        $profit = 0;$/;"	variable	line:27
+profit_sweat	/Users/devidso/websites/oranzine/resources/views/services/all.blade.php	/^                            ($service->sweat) ? $profit_sweat = $profit_sweat + ($service->price - $service->cost) : $profit = $profit + ($service->price - $service->cost);$/;"	variable	line:31
+number	/Users/devidso/websites/oranzine/resources/views/services/all.blade.php	/^                            @foreach($services as $number => $service)$/;"	variable	line:52

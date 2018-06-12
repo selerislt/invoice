@@ -1,0 +1,10 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+profit_sweat	/Users/devidso/websites/oranzine/resources/views/services/all.blade.php	/^                        $profit_sweat = 0;$/;"	variable	line:26
+profit	/Users/devidso/websites/oranzine/resources/views/services/all.blade.php	/^                        $profit = 0;$/;"	variable	line:27
+profit_sweat	/Users/devidso/websites/oranzine/resources/views/services/all.blade.php	/^                            ($service->sweat) ? $profit_sweat = $profit_sweat + ($service->price - $service->cost) : $profit = $profit + ($service->price - $service->cost);$/;"	variable	line:31
+number	/Users/devidso/websites/oranzine/resources/views/services/all.blade.php	/^                            @foreach($services as $number => $service)$/;"	variable	line:52
